@@ -8,5 +8,13 @@
 </head>
 <body>
 <h1>This Is demo Hiren, Great keep it up</h1>
+
+	<form action="process" method="post">
+		UserName:<input type="text" name="name" required="required"><br>
+		UserEmail:<input type="email" name="e" required="required"><br>
+		<input type="submit" value="Submit">
+	
+	
+	</form>
 </body>
 </html>
