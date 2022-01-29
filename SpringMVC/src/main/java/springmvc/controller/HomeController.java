@@ -49,7 +49,7 @@ public class HomeController
 	}
 	
 	@RequestMapping(path = "/cdata", method = RequestMethod.GET)
-	public String conHandler(@ModelAttribute User user, Model m)
+	public String conHandler(@ModelAttribute("user") User user, Model m)
 	{
 		System.out.println(user.getName());
 		return "success";
