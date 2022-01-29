@@ -1,5 +1,6 @@
 package springmvc.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -8,10 +9,14 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import springmvc.Model.User;
+import springmvc.service.UserService;
 
 @Controller
 public class HomeController 
 {
+	@Autowired
+	private UserService userService;
+	
 	@RequestMapping("/home")
 	public String home()
 	{
@@ -52,6 +57,7 @@ public class HomeController
 	public String conHandler(@ModelAttribute("user") User user, Model m)
 	{
 		System.out.println(user.getName());
+		userService.createUser(user);
 		return "success";
 	}
 	

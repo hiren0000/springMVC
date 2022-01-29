@@ -1,7 +1,17 @@
 package springmvc.Model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+
+@Entity
 public class User 
 {
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private int id;
 	private String name;
 	private String Email;
 	private int phoneNumber;
@@ -11,11 +21,20 @@ public class User
 		
 	}
 
-	public User(String name, String email, int phoneNumber) {
+	public User(int id, String name, String email, int phoneNumber) {
 		super();
+		this.id = id;
 		this.name = name;
 		Email = email;
 		this.phoneNumber = phoneNumber;
+	}
+	
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	public String getName() {
