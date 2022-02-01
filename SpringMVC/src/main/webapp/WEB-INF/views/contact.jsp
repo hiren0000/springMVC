@@ -11,6 +11,7 @@
 		UserName:<input type="text" name="name"><br>
 		UserEmail:<input type="email" name="Email"><br>
 		UserPhoneNumber:<input type="number" name="phoneNumber"><br>
+		User Image:<input type="file" name="avatar" accept="image/png, image/jpeg">
 		<input type="submit" value="Submit">
 	
 	

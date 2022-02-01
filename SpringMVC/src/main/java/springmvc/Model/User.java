@@ -15,18 +15,20 @@ public class User
 	private String name;
 	private String Email;
 	private int phoneNumber;
+	private byte[] avatar;
 	
 	public User()
 	{
 		
 	}
 
-	public User(int id, String name, String email, int phoneNumber) {
+	public User(int id, String name, String email, int phoneNumber, byte[] avatar) {
 		super();
 		this.id = id;
 		this.name = name;
 		Email = email;
 		this.phoneNumber = phoneNumber;
+		this.avatar = avatar;
 	}
 	
 	public int getId() {
@@ -59,6 +61,14 @@ public class User
 
 	public void setPhoneNumber(int phoneNumber) {
 		this.phoneNumber = phoneNumber;
+	}
+	
+	public byte[] getAvatar() {
+		return avatar;
+	}
+
+	public void setAvatar(byte[] avatar) {
+		this.avatar = avatar;
 	}
 
 	@Override

@@ -19,6 +19,10 @@
  Your Phone Number is:<%=user.getPhoneNumber() %><br>
  &&<br>
  Your Email id is:<%=user.getEmail() %>
+ <div>
+ 	My Image is:<img src="<%=user.getAvatar() %>" width="240" height="300">
+ 
+ </div>
 
 </body>
 </html>
